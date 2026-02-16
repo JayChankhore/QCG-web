@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recruitment Flow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button class="toggle-theme" id="themeToggle">Toggle Theme</button>
+
+  <!-- Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Step 1: User Details -->
+  <section class="step active card" id="step1">
+    <h2>Step 1: Enter Your Details</h2>
+    <form id="detailsForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <button type="submit" class="btn-primary">Next ➡️</button>
+    </form>
+  </section>
+
+  <!-- Step 2: Domain Selection -->
+  <section class="step hidden card" id="step2">
+    <h2>Step 2: Select Your Preferred Domain</h2>
+    <div class="domains">
+      <label class="domain-card"><input type="checkbox" value="Core"> Core</label>
+      <label class="domain-card"><input type="checkbox" value="Web Development"> Web Development</label>
+      <label class="domain-card"><input type="checkbox" value="Design"> Design</label>
+    </div>
+    <button onclick="goToQuiz()" class="btn-primary">Next ➡️</button>
+  </section>
+
+  <!-- Step 3: Quiz -->
+  <section class="step hidden card" id="step3">
+    <h2>Step 3: Domain Quiz</h2>
+    <div id="quiz"></div>
+    <button onclick="submitQuiz()" class="btn-primary">Submit Quiz ✅</button>
+  </section>
+
+  <!-- Step 4: Result -->
+  <section class="step hidden card" id="step4">
+    <h2>🎉 Your Result</h2>
+    <p id="resultText"></p>
+    <button onclick="location.href='index.html'" class="btn-secondary">Back to Home</button>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="quiz.js"></script>
+  <script>
+    // Theme toggle for apply.html
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>

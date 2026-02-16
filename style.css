@@ -1,0 +1,198 @@
+:root {
+  --bg: #f4f4f4;
+  --text: #333;
+  --accent: #0077ff;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #f4f4f4;
+  --accent: #0077ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 5px;
+  transition: transform 0.2s, background 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+  background: #444;
+}
+
+.step {
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
+.step.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#progress-bar {
+  height: 5px;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.toggle-theme {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.landing {
+  background-color: darkviolet;
+  border-radius: 2cm;
+  color : white;
+}
+
+.hero {
+  background: linear-gradient(135deg,darkmagenta, lightpink);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.block {
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  background: var(--bg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.block:hover {
+  transform: translateY(-5px);
+}
+
+.block h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--accent);
+   background: linear-gradient(135deg,darkmagenta, lightpink);
+  color: #fff;
+}
+
+/* Header button */
+.btn-header {
+  background: pink;  
+  color:black;
+}
+.btn-header:hover {
+  background: #e91e63;   
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Footer button */
+.btn-footer {
+  background: #4caf50;  
+  color:black;
+}
+.btn-footer:hover {
+  background: #388e3c;  
+  color:#fff;
+}
+
+/* Progress Bar */
+#progress-container {
+  width: 100%;
+  background: #ddd;
+  height: 8px;
+  margin-bottom: 20px;
+}
+#progress-bar {
+  height: 8px;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Card Layout */
+.card {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  background: #444;
+}
+
+.btn-secondary {
+  background: #888;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: #555;
+}
+
+/* Domain Cards */
+.domains {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.domain-card {
+  background: var(--bg);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.domain-card:hover {
+  transform: translateY(-5px);
+}
